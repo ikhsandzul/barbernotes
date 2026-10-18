@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+input, button, select, textarea {
+  user-select: auto;
+}
+
+/* Safe area padding for mobile bottom nav bar */
+.pb-safe {
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom, 1rem));
+}

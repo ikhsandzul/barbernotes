@@ -1,0 +1,49 @@
+Product Requirement Document (PRD)
+Nama Produk (Temporary): BarberNotes / CukurCatat
+
+Target User: Pemilik & Kapster Barbershop (Gunakan HP, butuh input super cepat < 10 detik per pelanggan).
+
+Platform: Web App (Mobile-First / PWA Friendly).
+
+Tech Stack Recommended: Next.js / React, Tailwind CSS, Supabase (Database & Auth), Vercel Hosting.
+
+1. Objective & Problem Statement
+Problem: Pencatatan buku manual rentan hilang, kotor kena minyak/air, dan pembuat laporan omzet harian butuh waktu lama karena harus menghitung ulang.
+
+Objective: Menyediakan aplikasi web ringan, gratis biaya langganan, ramah di HP untuk mencatat transaksi harian barbershop secara instan dan merekap omzet otomatis.
+
+2. Key Features (MVP Scope)
+Quick Transaction Entry (Pencatatan Cepat):
+
+Input nama pelanggan (Opsional/Bisa anonim).
+
+Pilih layanan (Cukurnya aja, Cukur + Shaving, Cat Rambut, dll.).
+
+Pilih Kapster (Tukang Cukur) yang mengerjakan.
+
+Method pembayaran (Tunai / QRIS).
+
+Dashboard / Ringkasan Harian:
+
+Total omzet hari ini.
+
+Total pelanggan hari ini.
+
+Breakdown omzet per kapster (buat bagi hasil/komisi).
+
+Master Data Management:
+
+Kelola daftar layanan & harga.
+
+Kelola daftar kapster/staf.
+
+Filter & Export Sederhana:
+
+Lihat riwayat transaksi berdasarkan tanggal.
+
+3. Data Model / Schema (Supabase / Postgres)
+services (id, name, price)
+
+barbers (id, name, commission_rate)
+
+transactions (id, service_id, barber_id, customer_name, price, payment_method, created_at)
